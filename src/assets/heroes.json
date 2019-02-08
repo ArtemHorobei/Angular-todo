@@ -1,0 +1,28 @@
+{
+  "heroesList": [
+    {
+      "name": "Logan",
+      "weapon": "Claws",
+      "level": 1,
+      "ability": "Truth"
+    },
+    {
+      "name": "Spider-man",
+      "weapon": "Web",
+      "level": 2,
+      "ability": "Truth"
+    },
+    {
+      "name": "Thor",
+      "weapon": "Hammer",
+      "level": 6,
+      "ability": "Truth"
+    },
+    {
+      "name": "Hulk",
+      "weapon": "Empty",
+      "level": 8,
+      "ability": "Truth"
+    }
+  ]
+}
