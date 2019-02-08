@@ -8,8 +8,6 @@ import { configAPI } from '../../constants/config';
   providedIn: 'root'
 })
 export class UsersService {
-  users: User[] = [];
-
   constructor(private http: HttpClient) { }
 
   fetchUsers() {
