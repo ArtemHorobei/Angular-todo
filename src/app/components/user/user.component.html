@@ -1,3 +1,29 @@
-<div *ngFor="let user of users">
-  {{user.name}}
+<div
+  class="User-card"
+  *ngFor="let user of users"
+>
+  <div class="user-base">
+    <img
+      src="../../../assets/img/profile-default.jpg"
+      class="avatar"
+      alt="skeleton-avatar">
+    <div>
+      <div class="ml-2 user-name">{{user.name}}</div>
+      <div class="ml-2 user-nickname">
+        <span>{{user.nickname}}</span> || <span>{{user.email}}</span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div class="user-name">Contacts:</div>
+      <div class="ml-2">{{user.phone}}</div>
+      <div class="ml-2">{{user.website}}</div>
+    </div>
+    <div>
+      <div class="user-name">Company:</div>
+      <div class="ml-2">{{user.companyName}}</div>
+      <div class="ml-2">{{user.companyPhrase}}</div>
+    </div>
+  </div>
 </div>

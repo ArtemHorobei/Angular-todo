@@ -18,6 +18,7 @@ export class UserComponent implements OnInit {
   }
 
   fetchUsers = () => {
-    this.usersService.fetchUsers().subscribe(data => this.users = data);
+    this.usersService.fetchUsers()
+      .subscribe(users => this.users = users);
   };
 }

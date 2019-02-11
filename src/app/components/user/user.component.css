@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+.User-card {
+  border: 1px solid #888888;
+  border-radius: 5px;
+  font-family: "Raleway";
+  margin: 10px auto;
+  max-width: 365px;
+  padding: 15px;
+}
+
+.user-base {
+  align-items: center;
+  display: flex;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-nickname {
+  font-size: 14px;
+}
