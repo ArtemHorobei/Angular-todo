@@ -34,6 +34,6 @@ export class UsersService {
   }
 
   fetchUser(userId): Observable<User> {
-    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.users}/${userId}`);
+    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.users}${userId}`);
   }
 }
