@@ -1,6 +1,7 @@
 <div
   class="User-card"
   *ngFor="let user of users"
+  routerLink="/users/{{user.id}}"
 >
   <div class="user-base">
     <img

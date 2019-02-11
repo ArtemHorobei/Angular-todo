@@ -9,6 +9,10 @@
   padding: 15px;
 }
 
+.User-card:hover {
+  cursor: pointer;
+}
+
 .user-base {
   align-items: center;
   display: flex;

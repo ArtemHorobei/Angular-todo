@@ -19,6 +19,7 @@ export class UsersService {
         map(data =>
           data.map((user: any) =>
             ({
+              id: user.id,
               name: user.name,
               nickname: user.username,
               email: user.email,
@@ -30,5 +31,9 @@ export class UsersService {
           )
         )
       );
+  }
+
+  fetchUser(userId): Observable<User> {
+    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.users}/${userId}`);
   }
 }
