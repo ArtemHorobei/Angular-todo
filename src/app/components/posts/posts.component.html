@@ -5,5 +5,13 @@
   <div class="title">{{ post.title }}</div>
   <div>{{ post.body }}</div>
 
-  <button>Fetch comments</button>
+  <button (click)="fetchComments(post.id)">Fetch comments</button>
+
+  <div
+    style="margin: 5px 0; padding: 10px; border: 1px solid black"
+    *ngFor="let comment of comments"
+  >
+    <div style="font-weight: bold">{{ comment.email }}</div>
+    <p>{{ comment.body }}</p>
+  </div>
 </div>

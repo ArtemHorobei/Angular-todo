@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from '../../services/posts/posts.service';
 import { ActivatedRoute } from '@angular/router';
 
+import { PostsService } from '../../services/posts/posts.service';
+import { CommentsService } from '../../services/comments/comments.service';
 import { Post } from '../../classes/post';
+import { Comment } from '../../classes/comment';
 
 @Component({
   selector: 'app-posts',
@@ -11,9 +13,11 @@ import { Post } from '../../classes/post';
 })
 export class PostsComponent implements OnInit {
   posts: Post[] = [];
+  comments: Comment[] = [];
 
   constructor(
     private postsService: PostsService,
+    private commentsService: CommentsService,
     private route: ActivatedRoute,
   ) { }
 
@@ -28,4 +32,8 @@ export class PostsComponent implements OnInit {
       .subscribe(posts => this.posts = posts);
   }
 
+  fetchComments = (postId) => {
+    this.commentsService.fetchComments(postId)
+      .subscribe(comments => this.comments = comments);
+  }
 }
