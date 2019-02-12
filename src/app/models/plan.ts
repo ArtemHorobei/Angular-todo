@@ -1,4 +1,4 @@
-export class Plan {
+export interface Plan {
   id: number;
   userId: number;
   title: string;

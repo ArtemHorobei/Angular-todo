@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {config, Observable} from 'rxjs';
 
-import { Plan } from '../../classes/plan';
+import { Plan } from '../../models/plan';
 import { configAPI } from '../../constants/config';
 
 @Injectable({

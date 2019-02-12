@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 
 import { PostsService } from '../../services/posts/posts.service';
 import { CommentsService } from '../../services/comments/comments.service';
-import { Post } from '../../classes/post';
-import { Comment } from '../../classes/comment';
+import { Post } from '../../models/post';
+import { Comment } from '../../models/comment';
 
 @Component({
   selector: 'app-posts',

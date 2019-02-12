@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { UsersService } from '../../services/users/users.service';
-import { User } from '../../classes/user';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-user-details',

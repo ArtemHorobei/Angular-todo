@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { PlansService } from '../../services/plans/plans.service';
-import { Plan } from '../../classes/plan';
+import { Plan } from '../../models/plan';
 
 @Component({
   selector: 'app-plans',
