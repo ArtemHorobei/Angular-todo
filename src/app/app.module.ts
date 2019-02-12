@@ -11,6 +11,10 @@ import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { PlansComponent } from './components/plans/plans.component';
 
+import { MaterialModule } from './material';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,9 @@ import { PlansComponent } from './components/plans/plans.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    SuiModule
+    SuiModule,
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

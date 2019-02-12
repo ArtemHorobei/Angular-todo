@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('@angular/material/prebuilt-themes/purple-green.css');
 
 body{
   padding: 0;

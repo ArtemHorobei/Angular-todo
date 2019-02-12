@@ -2,11 +2,15 @@
   class="User-details"
   style="display: flex"
 >
-  <button (click)="goBack()">Back</button>
-  <img
-    src="../../../assets/img/profile-default.jpg"
-    class="avatar"
-    alt="skeleton-avatar">
+  <div>
+    <div>
+      <button (click)="goBack()">Back</button>
+    </div>
+    <img
+      src="../../../assets/img/profile-default.jpg"
+      class="avatar"
+      alt="skeleton-avatar">
+  </div>
 
   <div class="ml-4">
     <div>
@@ -17,15 +21,16 @@
     <div>
       <div>
         <div style="font-weight: bold">Contacts:</div>
-        <div class="">{{user.phone}}</div>
-        <div class="">{{user.website}}</div>
+        <div>{{user.phone}}</div>
+        <div>{{user.website}}</div>
       </div>
       <div>
         <div style="font-weight: bold">Company:</div>
-        <div class="">{{user.company.name}}</div>
-        <div class="">{{user.company.catchPhrase}}</div>
+        <div>{{user.company.name}}</div>
+        <div>{{user.company.catchPhrase}}</div>
       </div>
     </div>
+    <button>Albums</button>
   </div>
 
 </div>
@@ -34,3 +39,4 @@
   <app-posts></app-posts>
   <app-plans></app-plans>
 </div>
+
