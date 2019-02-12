@@ -8,6 +8,7 @@ import { UserComponent } from './components/user/user.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { PlansComponent } from './components/plans/plans.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     UserDetailsComponent,
     PostsComponent,
     CommentsComponent,
+    PlansComponent,
   ],
   imports: [
     BrowserModule,

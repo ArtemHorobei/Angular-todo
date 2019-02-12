@@ -3,6 +3,7 @@ export const configAPI = {
   entities: {
     users: 'users/',
     posts: 'posts/',
-    comments: 'comments/'
+    comments: 'comments/',
+    plans: 'todos/'
   },
 };

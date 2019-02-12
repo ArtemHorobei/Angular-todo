@@ -1,0 +1,25 @@
+<div style="display: flex">
+  <ol class="Plan-card">
+    <li
+      *ngFor="let plan of plans.done"
+    >
+      {{ plan.title.charAt(0).toUpperCase() + plan.title.slice(1) }}
+      <div class="status">
+        Status: {{ plan.completed }}
+      </div>
+
+    </li>
+  </ol>
+
+  <ol class="Plan-card">
+    <li
+      *ngFor="let plan of plans.inProgress"
+    >
+      {{ plan.title.charAt(0).toUpperCase() + plan.title.slice(1) }}
+      <div class="status">
+        Status: {{ plan.completed }}
+      </div>
+
+    </li>
+  </ol>
+</div>
