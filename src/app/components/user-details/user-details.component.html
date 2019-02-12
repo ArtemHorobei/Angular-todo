@@ -1,9 +1,8 @@
 <div
   class="User-details"
-  (click)="goBack()"
   style="display: flex"
 >
-
+  <button (click)="goBack()">Back</button>
   <img
     src="../../../assets/img/profile-default.jpg"
     class="avatar"
@@ -11,21 +10,18 @@
 
   <div class="ml-4">
     <div>
-      <div class="">
-        <span>{{user.name}} || {{user.username}}</span>
-      </div>
-      <div class="">
-        <span>{{user.email}}</span>
-      </div>
+      <div style="font-weight: bold">Info:</div>
+      <div><span>{{user.name}} || {{user.username}}</span></div>
+      <div><span>{{user.email}}</span></div>
     </div>
     <div>
       <div>
-        <div class="">Contacts:</div>
+        <div style="font-weight: bold">Contacts:</div>
         <div class="">{{user.phone}}</div>
         <div class="">{{user.website}}</div>
       </div>
       <div>
-        <div class="user-name">Company:</div>
+        <div style="font-weight: bold">Company:</div>
         <div class="">{{user.company.name}}</div>
         <div class="">{{user.company.catchPhrase}}</div>
       </div>
