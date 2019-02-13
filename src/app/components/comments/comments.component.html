@@ -1,3 +1,12 @@
-<p>
-  comments works!
-</p>
+<button
+  mat-raised-button
+  color="primary"
+  (click)="toggleComments()"
+>
+  {{ isOpen ? 'Hide comments' : 'Show comments' }}
+</button>
+<div *ngIf="(isOpen)">
+  <div *ngFor="let comment of comments">
+    <app-comment [comment]="comment"></app-comment>
+  </div>
+</div>

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { CommentsService } from '../../services/comments/comments.service';
+import { Comment } from '../../models/comment';
 
 @Component({
   selector: 'app-comments',
@@ -6,7 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
-  constructor() {}
+  @Input() postId: number;
+  comments: Comment[] = [];
+  isOpen = false;
 
-  ngOnInit() {}
+  constructor(private commentsService: CommentsService) {}
+
+  ngOnInit() {
+    this.fetchComments();
+  }
+
+  fetchComments() {
+    this.commentsService.fetchComments(this.postId)
+      .subscribe(comments => {
+        this.comments = comments;
+      });
+  }
+
+  toggleComments() {
+    this.isOpen = !this.isOpen;
+  }
 }

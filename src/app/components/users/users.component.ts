@@ -4,11 +4,11 @@ import { UsersService } from '../../services/users/users.service';
 import { User } from '../../models/user';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class UserComponent implements OnInit {
+export class UsersComponent implements OnInit {
   users: User[] = [];
 
   constructor(private usersService: UsersService) { }
@@ -20,5 +20,5 @@ export class UserComponent implements OnInit {
   fetchUsers = () => {
     this.usersService.fetchUsers()
       .subscribe(users => this.users = users);
-  };
+  }
 }

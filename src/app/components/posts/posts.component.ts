@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { PostsService } from '../../services/posts/posts.service';
 import { CommentsService } from '../../services/comments/comments.service';
 import { Post } from '../../models/post';
-import { Comment } from '../../models/comment';
 
 @Component({
   selector: 'app-posts',
@@ -13,7 +12,6 @@ import { Comment } from '../../models/comment';
 })
 export class PostsComponent implements OnInit {
   posts: Post[] = [];
-  comments: Comment[] = [];
 
   constructor(
     private postsService: PostsService,
@@ -32,8 +30,4 @@ export class PostsComponent implements OnInit {
       .subscribe(posts => this.posts = posts);
   }
 
-  fetchComments = (postId) => {
-    this.commentsService.fetchComments(postId)
-      .subscribe(comments => this.comments = comments);
-  }
 }
