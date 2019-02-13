@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
 
 import { UsersService } from '../../services/users/users.service';
 import { User } from '../../models/user';
@@ -12,7 +11,7 @@ import * as fromRoot from '../../store/reducers';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users: Observable<User[]>;
+  users: User[];
 
   constructor(
     private usersService: UsersService,
