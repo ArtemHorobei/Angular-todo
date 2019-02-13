@@ -4,6 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { HttpClientModule } from '@angular/common/http';
 import { SuiModule } from 'ng2-semantic-ui';
 
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
@@ -41,6 +42,7 @@ import { reducers, metaReducers } from './store/reducers';
     MaterialModule,
     BrowserAnimationsModule,
     StoreModule.forRoot(reducers, { metaReducers }),
+    environment.imports
   ],
   providers: [],
   bootstrap: [AppComponent]
