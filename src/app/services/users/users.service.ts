@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 import { User } from '../../models/user';
 import { configAPI } from '../../constants/config';
@@ -19,5 +18,5 @@ export class UsersService {
   fetchUser(userId): Observable<User> {
     return this.http.get<User>(`${configAPI.baseUrl}${configAPI.entities.users}${userId}`);
   }
-  
+
 }
