@@ -1,19 +1,12 @@
 import { Action } from '@ngrx/store';
 import { User } from '../../models/user';
 
-export const SELECT = '[USERS] Select';
-export const ADD_ONE = '[USERS] Add One';
+export const FETCH_SUCCESS = '[USERS] Fetch Success';
 
-export class Select implements Action {
-  readonly type = SELECT;
+export class FetchSuccess implements Action {
+  readonly type = FETCH_SUCCESS;
 
-  constructor(public payload: number) { }
+  constructor(public payload: User[]) { }
 }
 
-export class AddOne implements Action {
-  readonly type = ADD_ONE;
-
-  constructor(public payload: User) { }
-}
-
-export type Action = AddOne | Select;
+export type Action = FetchSuccess;
