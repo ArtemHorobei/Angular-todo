@@ -12,28 +12,12 @@ import { configAPI } from '../../constants/config';
 export class UsersService {
   constructor(private http: HttpClient) { }
 
-  fetchUsers(): Observable<User> {
-    return this.http
-      .get(`${configAPI.baseUrl}${configAPI.entities.users}`)
-      .pipe(
-        map(data =>
-          data.map((user: any) =>
-            ({
-              id: user.id,
-              name: user.name,
-              nickname: user.username,
-              email: user.email,
-              phone: user.phone,
-              website: user.website,
-              companyName: user.company.name,
-              companyPhrase: user.company.catchPhrase,
-            })
-          )
-        )
-      );
+  fetchUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${configAPI.baseUrl}${configAPI.entities.users}`);
   }
 
   fetchUser(userId): Observable<User> {
-    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.users}${userId}`);
+    return this.http.get<User>(`${configAPI.baseUrl}${configAPI.entities.users}${userId}`);
   }
+  
 }

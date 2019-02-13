@@ -10,7 +10,8 @@ import { configAPI } from '../../constants/config';
 })
 export class PostsService {
   constructor(private http: HttpClient) { }
-  fetchPosts(userId): Observable<Post> {
-    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.posts}?userId=${userId}`);
+
+  fetchPosts(userId): Observable<Post[]> {
+    return this.http.get<Post[]>(`${configAPI.baseUrl}${configAPI.entities.posts}?userId=${userId}`);
   }
 }

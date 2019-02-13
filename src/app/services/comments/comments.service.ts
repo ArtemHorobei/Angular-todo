@@ -10,7 +10,8 @@ import { configAPI } from '../../constants/config';
 })
 export class CommentsService {
   constructor(private http: HttpClient) { }
-  fetchComments(postId): Observable<Comment> {
-    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.comments}?postId=${postId}`);
+
+  fetchComments(postId): Observable<Comment[]> {
+    return this.http.get<Comment[]>(`${configAPI.baseUrl}${configAPI.entities.comments}?postId=${postId}`);
   }
 }

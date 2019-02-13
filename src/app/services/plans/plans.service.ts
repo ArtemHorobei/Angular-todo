@@ -12,6 +12,6 @@ export class PlansService {
   constructor(private http: HttpClient) { }
 
   fetchPlans(userId): Observable<Plan[]> {
-    return this.http.get(`${configAPI.baseUrl}${configAPI.entities.plans}?userId=${userId}`);
+    return this.http.get<Plan[]>(`${configAPI.baseUrl}${configAPI.entities.plans}?userId=${userId}`);
   }
 }

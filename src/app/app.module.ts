@@ -13,6 +13,7 @@ import { PlansComponent } from './components/plans/plans.component';
 
 import { MaterialModule } from './material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PostComponent } from './components/post/post.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostsComponent,
     CommentsComponent,
     PlansComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,
